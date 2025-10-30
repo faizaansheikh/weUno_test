@@ -1,4 +1,3 @@
-import React from 'react'
 import CustomButton from './CustomButton'
 import img1 from '../../assets/box1.png'
 import img2 from '../../assets/box2.png'
@@ -39,7 +38,7 @@ function Section3() {
                 <div className='mt-10'><CustomButton label='Book General Access Ticket' width='320px' icon={true}/></div>
             </div>
 
-            <div className="max-w-[1200px] w-full px-3 md:px-0 my-12 h-auto flex items-center gap-6  overflow-x-auto snap-x snap-mandatory scroll-smooth">
+            <div className="max-w-[1200px] w-full px-3 md:px-0 my-12 h-auto flex items-center gap-6  overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-custom" >
                 {arr.map((x, i) => (
                     <div key={i}>
                         <div

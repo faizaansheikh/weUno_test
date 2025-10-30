@@ -8,11 +8,8 @@ export default function HeroSection() {
             style={{
                 backgroundImage: `url(${hero})`,
             }}
-        >
-            {/* Overlay (optional) */}
+        >           
             <div className="absolute inset-0 bg-black/50"></div>
-
-            {/* Content */}
             <div className="relative z-10 flex flex-col text-center text-white h-full ">
                 <Navbar />
 

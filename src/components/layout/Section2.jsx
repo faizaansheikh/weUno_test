@@ -1,4 +1,3 @@
-import React from 'react'
 import img from '../../assets/mall_of.png'
 import { FaArrowRight } from "react-icons/fa6";
 function Section2() {

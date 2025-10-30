@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import logo from '../../assets/icons/logo.png'
 import flag from '../../assets/icons/flag.png'
 import CustomButton from './CustomButton'

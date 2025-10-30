@@ -21,7 +21,7 @@ function Section6() {
                 {textContent()}
             </div>
 
-            {/* mobile */}
+           
             <div className='flex mt-16 lg:hidden  w-full h-auto px-4 md:px-32 lg:px-52 flex-wrap '>
                 {textContent()}
                 {imgContent()}

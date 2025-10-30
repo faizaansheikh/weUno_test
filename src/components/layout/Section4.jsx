@@ -1,4 +1,3 @@
-import React from 'react'
 import img1 from '../../assets/c1.png'
 import img2 from '../../assets/c2.png'
 import img3 from '../../assets/c3.png'
@@ -34,7 +33,7 @@ function Section4() {
             <div className="flex items-center gap-6 justify-center flex-wrap mt-12 md:mt-16">
                 {
                     arr.map((x, i) => (
-                        <div key={i} className="bg-[#2B3612] w-[500px] h-[418px] rounded-4xl cursor-pointer transition-colors duration-300 hover:bg-[#2d3912]">
+                        <div key={i} className="bg-[#2B3612] w-[500px]  rounded-4xl cursor-pointer transition-colors duration-300 hover:bg-[#2d3912] pb-8">
                             <img src={x.img} alt="" className='w-full object-cover p-3' />
                             <div className='flex items-center justify-between px-6 '>
                                 <span>

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import img1 from '../../assets/apple.png'
 import img2 from '../../assets/google.png'
 import card from '../../assets/mastercard.png'

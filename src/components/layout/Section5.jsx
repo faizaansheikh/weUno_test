@@ -1,4 +1,3 @@
-import React from 'react'
 import img1 from '../../assets/b1.png'
 import img2 from '../../assets/b2.png'
 import img3 from '../../assets/box2.png'
@@ -23,8 +22,8 @@ function Section5() {
         </div>
 
    
-        <div className="w-full overflow-x-auto scrollbar-hide">
-          <div className="flex gap-6 snap-x snap-mandatory scroll-smooth">
+        <div className="w-full overflow-x-auto scrollbar-hide scrollbar-custom">
+          <div className="flex gap-6 snap-x snap-mandatory scroll-smooth ">
             {arr.map((x, i) => (
               <div key={i} className="flex flex-col items-center justify-center snap-center shrink-0">
                 <div
