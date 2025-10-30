@@ -2,25 +2,23 @@
 
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* line-height: 1.5; */
+  --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-serif: 'Playfair Display', Georgia, "Times New Roman", Times, serif;
   font-weight: 600;
-
-  /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  /* --color-primary: red; */
   --color-btn: linear-gradient(to bottom, #d4af37, #b8860b);
-    --color-primary: linear-gradient(to bottom, #111700, #1B2503, #243005);
-  --color-secondary:#C39F5E;
+  --color-primary: linear-gradient(to bottom, #111700, #1B2503, #243005);
+  --color-secondary: #C39F5E;
 }
 
+html,
 body {
-  /* margin: 0;
-  padding: 0; */
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
 }

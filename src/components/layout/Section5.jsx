@@ -2,61 +2,49 @@ import React from 'react'
 import img1 from '../../assets/b1.png'
 import img2 from '../../assets/b2.png'
 import img3 from '../../assets/box2.png'
-import { FaArrowRight } from "react-icons/fa6";
 import CustomButton from './CustomButton'
+
 function Section5() {
-    const arr = [
+  const arr = [
+    { width: '220px', height: '300px', img: img3, title: 'Restaurants' },
+    { width: '330px', height: '450px', img: img1, title: 'Experiences' },
+    { width: '220px', height: '300px', img: img2, title: 'Events' },
+  ]
 
-        {
-            width: '220px',
-            height: '300px',
-            img: img3,
-            title: 'Restaurants'
-        },
-        {
-            width: '330px',
-            height: '450px',
-            img: img1,
-            title: 'Experiences'
-        },
-        {
-            width: '220px',
-            height: '300px',
-            img: img2,
-            title: 'Events'
-        },
-        
-
-    ]
-    return (
-        <div className=' w-full h-auto px-2 md:px-32 ld:px-52 mt-12 md:mt-22'>
-            <div className=' px-8 flex items-start bg-red-3d00  flex-wrap md:flex-nowrap gap-10'>
-                <div className='pr-10 md:mt-18 mb-4 md:md-0'>
-                    <p className='text-5xl pb-9 text-nowrap'>Create your <br /> experience <br /> as you like</p>
-                    <span className=' '> <CustomButton label='Book Tickets' /></span>
-                </div>
-
-                <div className="bg-emerald-300gh max-w-[1200px] w-full md:px-0 pb-4 h-auto flex justify-center items-center gap-6  overflow-x-auto snap-x snap-mandatory scroll-smooth">
-                    {arr.map((x, i) => (
-                        <div key={i}>
-                            <div
-
-                                style={{ width: x.width, height: x.height }}
-                                className="min-w-[200px] shrink-0 rounded-3xl overflow-hidden snap-center "
-                            >
-                                <img src={x.img} alt="" className="w-full h-full" />
-
-                            </div>
-                            <p className='text-center text-2xl my-6'>{x.title}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-
-
+  return (
+    <div className="w-full h-auto px-4 md:px-32 lg:px-52 mt-12 md:mt-22">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-10">
+    
+        <div className="flex flex-col md:mb-12">
+          <h1 className="text-[45px]  pb-10 leading-tight md:pr-12 mt-8 md:mt-0 text-nowrap ml-2 md:ml-0">
+            Create your <br /> experience <br /> as you like
+          </h1>
+          <CustomButton label="Book Tickets" width='200px' icon={true}/>
         </div>
-    )
+
+   
+        <div className="w-full overflow-x-auto scrollbar-hide">
+          <div className="flex gap-6 snap-x snap-mandatory scroll-smooth">
+            {arr.map((x, i) => (
+              <div key={i} className="flex flex-col items-center justify-center snap-center shrink-0">
+                <div
+                  style={{ width: x.width, height: x.height }}
+                  className="rounded-3xl overflow-hidden "
+                >
+                  <img
+                    src={x.img}
+                    alt={x.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h1 className="text-center text-2xl my-6">{x.title}</h1>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Section5

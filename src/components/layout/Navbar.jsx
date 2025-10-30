@@ -29,7 +29,7 @@ function Navbar() {
                         <img src={logo} alt="Logo" className="w-full h-full py-2 " />
                     </div>
                     <div className='flex items-center gap-4'>
-                        <span className='flex items-center gap-4 text-[lightgrey] ml-3'>
+                        <span className=' md:hidden lg:flex items-center gap-4 text-[lightgrey] ml-3'>
                             <FaTiktok size={22} />
                             <AiFillInstagram size={22} />
                             <FaXTwitter size={22} />
@@ -51,7 +51,7 @@ function Navbar() {
 
                     {
                         menu.map((x, i) => (
-                            <li key={i} className='list-none'>{x}</li>
+                            <li key={i} className='list-none md:text-[12px] lg:text-[15px]'>{x}</li>
                         ))
                     }
 

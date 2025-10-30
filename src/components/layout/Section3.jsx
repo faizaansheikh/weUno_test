@@ -35,8 +35,8 @@ function Section3() {
         <div className=' w-full h-auto md:px-22 lg:px-42 mt-18 md:mt-26'>
             <div className='px-6 md:px-0'>
 
-                <p className='text-5xl'>Book General Access ticket and <br /> enjoy the attraction for free</p>
-                <div className='mt-10'><CustomButton label='Book General Access Ticket' width='230px' /></div>
+                <h1 className='text-4xl md:text-5xl leading-tight'>Book General Access ticket and <br /> enjoy the attraction for free</h1>
+                <div className='mt-10'><CustomButton label='Book General Access Ticket' width='320px' icon={true}/></div>
             </div>
 
             <div className="max-w-[1200px] w-full px-3 md:px-0 my-12 h-auto flex items-center gap-6  overflow-x-auto snap-x snap-mandatory scroll-smooth">
@@ -50,7 +50,7 @@ function Section3() {
                             <img src={x.img} alt="" className="w-full h-full" />
 
                         </div>
-                        <p className='text-center text-2xl my-6'>{x.title}</p>
+                        <h1 className='text-center text-2xl my-6'>{x.title}</h1>
                     </div>
                 ))}
             </div>

@@ -8,21 +8,21 @@ function Section6() {
     }
     const textContent = () => {
         return <div className=' w-full h-full flex items-start justify-center gap-5 flex-col ml-2 md:ml-6'>
-            <p>EXPERIENCE THE GROVES</p>
-            <p className='text-5xl'>Find your place</p>
-            <p className='pr-10'>Our interactive map will show you the way to the shops and restaurants that you want to see.</p>
-            <span className='mt-5'><CustomButton label='Open the Map' /></span>
+            <p className='tracking-wider'>EXPERIENCE THE GROVES</p>
+            <h1 className='text-5xl'>Find your place</h1>
+            <p className='pr-4 md:pr-42 lg:pr-10'>Our interactive map will show you the way to the shops and restaurants that you want to see.</p>
+            <span className='mt-5'><CustomButton label='Open the Map' width='200px' icon={true}/></span>
         </div>
     }
     return (
         <>
-            <div className='hidden md:flex items-center w-full h-auto px-4 md:px-32 lg:px-52 flex-nowrap '>
+            <div className='hidden lg:flex items-center w-full h-auto px-4 md:px-32 lg:px-52 flex-nowrap '>
                 {imgContent()}
                 {textContent()}
             </div>
 
             {/* mobile */}
-            <div className='flex mt-16 md:hidden  w-full h-auto px-4 md:px-32 lg:px-52 flex-wrap '>
+            <div className='flex mt-16 lg:hidden  w-full h-auto px-4 md:px-32 lg:px-52 flex-wrap '>
                 {textContent()}
                 {imgContent()}
             </div>

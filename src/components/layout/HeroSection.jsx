@@ -19,9 +19,9 @@ export default function HeroSection() {
                 <div className="relative w-full md:w-[500px] h-full md:ml-42 bg-black/40  shadow-lg  text-start flex flex-col justify-center gap-8 px-6 md:px-0">
 
                     <p className='text-[14px]'>KHAWAJA YANNI</p>
-                    <p className='text-6xl'>The new <br /> era of luxury</p>
+                    <h1 className='text-6xl leading-tight'>The new <br /> era of luxury</h1>
                     <p className='text-[14px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br /> Reprehenderit placeat </p>
-                    <CustomButton label='Book Reservation Now' width='230px'/>
+                    <CustomButton label='Book Reservation Now' width='270px' icon={true}/>
 
                 </div>
 

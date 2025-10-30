@@ -14,20 +14,21 @@ function Footer() {
     return (
         <>
             <hr />
-            <div className='w-full h-auto bg-amdber-100 px-5 md:px-32 mt-16'>
+            <div className='w-full h-auto bg-amdber-100 px-5 md:px-32 mt-10 md:mt-16'>
                 <div className='flex justify-between items-center flex-wrap'>
-                    <p className='text-5xl'>Join us for an <br /> unforgettable experience</p>
-                    <div className='md:mt-0 mt-10'>
-                        <p>DOWNLOAD THE GROVES APP</p>
+                     <img src={logo} alt="" className='w-[250px] mb-8 block md:hidden' />
+                    <h1 className='text-5xl leading-tight'>Join us for an <br /> unforgettable experience</h1>
+                    <div className='mt-10 md:mt-8'>
+                        <p className='font-normal tracking-wide text-[14px]'>DOWNLOAD THE GROVES APP</p>
                         <span className='flex items-center gap-4 mt-4'>
                             <img src={img1} alt="" className='w-[150px] h-full cursor-pointer' />
-                            <img src={img2} alt="" className='w-[150px] h-[48px] cursor-pointer' />
+                            <img src={img2} alt="" className='w-[150px] h-12 cursor-pointer' />
                         </span>
                     </div>
                 </div>
 
-                <div className='flex items-start mt-22 gap-6 md:gap-36 font-normal flex-wrap'>
-                    <div>
+                <div className='flex items-start mt-12 md:mt-22 gap-8 lg:gap-22 font-normal flex-wrap text-[16px]'>
+                    <div className='w-[300px]'>
                         <p className='pb-4'>LOCATION</p>
 
                         <p>Al-Hizam Park</p>
@@ -35,7 +36,7 @@ function Footer() {
                         <p>Riyadh Saudi Arabia</p>
                     </div>
 
-                    <div>
+                    <div className='w-[300px] '>
                         <p className='pb-4'>WORKING HOURS</p>
 
                         <p>Sun until Thurs: 4:00PM</p>
@@ -45,7 +46,7 @@ function Footer() {
                         <p>Thu until Fri: 4:00PM</p>
                     </div>
 
-                    <div>
+                    <div className='w-[300px] '>
                         <p className='pb-4'>GUEST SERVICE CALL</p>
 
                         <p>cc@thegroves-sa.com</p>
@@ -57,7 +58,7 @@ function Footer() {
 
 
 
-                <div className='flex justify-between items-center mt-18 flex-wrap'>
+                <div className='flex justify-between items-center mt-12 md:mt-18 flex-wrap'>
                     <img src={logo} alt="" className='w-[280px] hidden md:block' />
                     <span className='flex items-center gap-8 text-[lightgrey] '>
                         <FaTiktok size={30} />
@@ -70,7 +71,7 @@ function Footer() {
 
 
                 <div className='flex justify-between items-center mt-8 font-normal pb-4 flex-wrap'>
-                   <span className='flex gap-4 md:gap-12 text-sm flex-wrap'>
+                   <span className='flex gap-4 md:gap-6 lg:gap-16 text-sm flex-wrap'>
                     <p>Terms & Conditions</p>
                     <p>Privacy Policy</p>
                     <p>@2025 The Groves for Entertainment</p>
