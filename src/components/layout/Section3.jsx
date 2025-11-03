@@ -3,23 +3,47 @@ import img1 from '../../assets/box1.png'
 import img2 from '../../assets/box2.png'
 import img3 from '../../assets/box3.png'
 import img4 from '../../assets/box4.png'
+import { FaCircleChevronRight } from "react-icons/fa6";
+import { FaCircleChevronLeft } from "react-icons/fa6";
+import { useRef } from 'react'
 function Section3() {
+    const sliderRef = useRef(null);
+
+
+
+    const scrollLeft = () => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollBy({
+                left: -300,
+                behavior: "smooth",
+            });
+        }
+    };
+    const scrollRight = () => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollBy({
+                left: 300,
+                behavior: "smooth",
+            });
+        }
+    };
+
     const arr = [
         {
-            width: '330px',
+            width: '350px',
             height: '450px',
             img: img1,
             title: 'Little Krazy'
         },
         {
-            width: '220px',
-            height: '300px',
+            width: '260px',
+            height: '330px',
             img: img2,
             title: 'Hawanim Groves City'
         },
         {
-            width: '330px',
-            height: '450px',
+            width: '350px',
+            height: '470px',
             img: img3,
             title: 'Picnic Market'
         },
@@ -35,23 +59,44 @@ function Section3() {
             <div className='px-6 md:px-0'>
 
                 <h1 className='text-4xl md:text-5xl leading-tight'>Book General Access ticket and <br /> enjoy the attraction for free</h1>
-                <div className='mt-10'><CustomButton label='Book General Access Ticket' width='320px' icon={true}/></div>
+                <div className='mt-10'><CustomButton label='Book General Access Ticket' width='320px' icon={true} /></div>
             </div>
+            <div className="max-w-[1200px] w-full px-3 md:px-0 my-12 flex items-center justify-center gap-4">
 
-            <div className="max-w-[1200px] w-full px-3 md:px-0 my-12 h-auto flex items-center gap-6  overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-custom" >
-                {arr.map((x, i) => (
-                    <div key={i}>
-                        <div
-                            
-                            style={{ width: x.width, height: x.height }}
-                            className="min-w-[250px] shrink-0 rounded-3xl overflow-hidden snap-center "
-                        >
-                            <img src={x.img} alt="" className="w-full h-full" />
+                <button
+                    onClick={scrollLeft}
+                    className="text-black-700 hover:text-gray-400 transition cursor-pointer"
+                >
+                    <FaCircleChevronLeft size={35} />
+                </button>
 
+
+                <div
+                    ref={sliderRef}
+                    className="flex items-center gap-6 overflow-x-hidden snap-x snap-mandatory scroll-smooth"
+                >
+                    {arr.map((x, i) => (
+                        <div key={i} className="text-center">
+                            <div
+                                style={{ width: x.width, height: x.height }}
+                                className="min-w-[250px] shrink-0 rounded-3xl overflow-hidden snap-center"
+                            >
+                                <img
+                                    src={x.img}
+                                    alt={x.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h1 className="text-center text-2xl my-6">{x.title}</h1>
                         </div>
-                        <h1 className='text-center text-2xl my-6'>{x.title}</h1>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <button
+                    onClick={scrollRight}
+                    className="text-black-700 hover:text-gray-400 transition cursor-pointer "
+                >
+                    <FaCircleChevronRight size={35} />
+                </button>
             </div>
 
 
