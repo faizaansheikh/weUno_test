@@ -1,6 +1,11 @@
 
 import { FaArrowRightLong } from "react-icons/fa6";
-function CustomButton(props) {
+interface CustomButtonProps {
+    label: string;
+    width?: string | number;
+    icon?: boolean;
+}
+function CustomButton(props: CustomButtonProps) {
     const { label, width, icon } = props
     return (
         <button

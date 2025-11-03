@@ -3,8 +3,14 @@ import img2 from '../../assets/c2.png'
 import img3 from '../../assets/c3.png'
 import img4 from '../../assets/c4.png'
 import { FaArrowRight } from "react-icons/fa6";
+
+interface slideItem {
+    img: string;
+    title: string;
+}
+type slideArr = slideItem[]
 function Section4() {
-    const arr = [
+    const arr: slideArr = [
         {
             img: img1,
             title: 'Vida Vera'
@@ -32,7 +38,7 @@ function Section4() {
 
             <div className="flex items-center gap-6 justify-center flex-wrap mt-12 md:mt-16">
                 {
-                    arr.map((x, i) => (
+                    arr.map((x: slideItem, i: number) => (
                         <div key={i} className="bg-[#2B3612] w-[500px]  rounded-4xl cursor-pointer transition-colors duration-300 hover:bg-[#2d3912] pb-8">
                             <img src={x.img} alt="" className='w-full object-cover p-3' />
                             <div className='flex items-center justify-between px-6 '>

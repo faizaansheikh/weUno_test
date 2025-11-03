@@ -6,10 +6,15 @@ import img4 from '../../assets/box4.png'
 import { FaCircleChevronRight } from "react-icons/fa6";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { useRef } from 'react'
+
+interface SlideItem {
+    height: string;
+    img: string;
+    title: string
+}
+type SlideArray = SlideItem[];
 function Section3() {
-    const sliderRef = useRef(null);
-
-
+    const sliderRef = useRef<HTMLDivElement | null>(null);
 
     const scrollLeft = () => {
         if (sliderRef.current) {
@@ -28,27 +33,27 @@ function Section3() {
         }
     };
 
-    const arr = [
+    const arr: SlideArray = [
         {
-            width: '350px',
+
             height: '450px',
             img: img1,
             title: 'Little Krazy'
         },
         {
-            width: '260px',
+
             height: '330px',
             img: img2,
             title: 'Hawanim Groves City'
         },
         {
-            width: '350px',
+
             height: '470px',
             img: img3,
             title: 'Picnic Market'
         },
         {
-            width: '220px',
+
             height: '300px',
             img: img4,
             title: 'Lucawe'
@@ -75,11 +80,14 @@ function Section3() {
                     ref={sliderRef}
                     className="flex items-center gap-6 overflow-x-hidden snap-x snap-mandatory scroll-smooth"
                 >
-                    {arr.map((x, i) => (
+                    {arr.map((x: SlideItem, i: number) => (
                         <div key={i} className="text-center">
                             <div
-                                style={{ width: x.width, height: x.height }}
-                                className="min-w-[250px] shrink-0 rounded-3xl overflow-hidden snap-center"
+                                style={{
+                                    // width: x.width, 
+                                    height: x.height
+                                }}
+                                className={`min-w-[250px] ${i % 2 === 0 ? "w-[200px] md:w-[300px]" : "w-[250px]"} shrink-0 rounded-3xl overflow-hidden snap-center`}
                             >
                                 <img
                                     src={x.img}

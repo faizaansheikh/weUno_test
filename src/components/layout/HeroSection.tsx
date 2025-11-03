@@ -3,9 +3,15 @@ import hero from '../../assets/hero.png'
 import CustomButton from './CustomButton';
 import Navbar from './Navbar';
 import { GoDotFill } from "react-icons/go";
+interface SlideItem {
+    title: string;
+    head: string;
+    para: string;
+}
+type SlideArray = SlideItem[];
 export default function HeroSection() {
-    const [index, setIndex] = useState(1);
-    const arr = [
+    const [index, setIndex] = useState<number>(0);
+    const arr: SlideArray = [
         {
             title: "KHAWAJA YANNI",
             head: "The new era of luxury",
@@ -41,7 +47,7 @@ export default function HeroSection() {
 
                 <div className="relative w-full md:w-[500px] h-full md:ml-42 bg-black/40 shadow-lg text-start flex flex-col justify-around px-6 md:px-0 py-10 text-white rounded-2xl overflow-hidden">
                     <div className="relative w-full h-[250px]">
-                        {arr.map((x, i) => (
+                        {arr.map((x:SlideItem, i:number) => (
                             <div
                                 key={i}
                                 className={`absolute inset-0 flex flex-col gap-6 transition-opacity duration-700 ease-in-out ${index === i ? "opacity-100" : "opacity-0"
@@ -57,9 +63,9 @@ export default function HeroSection() {
                         ))}
                     </div>
 
-                   
+
                     <div className="flex justify-end gap-0 mt-6 mr-8">
-                        {arr.map((_, i) => (
+                        {arr.map((_:SlideItem, i:number) => (
                             <GoDotFill
                                 key={i}
                                 onClick={() => setIndex(i)}

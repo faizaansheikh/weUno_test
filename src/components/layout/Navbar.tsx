@@ -11,8 +11,8 @@ import { FaChevronDown } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 function Navbar() {
-    const [open, setOpen] = useState(false)
-    const menu = [
+    const [open, setOpen] = useState<boolean>(false)
+    const menu: string[] = [
         'DINE IN WITH US',
         'PLAN YOUR VISIT',
         'EVENTS',
@@ -50,7 +50,7 @@ function Navbar() {
                 <div className='w-full h-[50px] border-t border-b flex justify-between items-center border-[grey] px-22 mt-2 text-[lightgrey]'>
 
                     {
-                        menu.map((x, i) => (
+                        menu.map((x: string, i: number) => (
                             <li key={i} className='list-none md:text-[12px] lg:text-[15px]'>{x}</li>
                         ))
                     }
@@ -89,7 +89,7 @@ function Navbar() {
 
                         <div>
                             {
-                                menu.map((x, i) => (
+                                menu.map((x: string, i: number) => (
                                     <li key={i} className={`w-full flex justify-start list-none py-5 border-b border-[lightgrey] ${i === 0 ? 'mt-2' : ''}`}>{x}</li>
                                 ))
                             }
