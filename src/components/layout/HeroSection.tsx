@@ -53,11 +53,11 @@ export default function HeroSection() {
                                 className={`absolute inset-0 flex flex-col gap-6 transition-opacity duration-700 ease-in-out ${index === i ? "opacity-100" : "opacity-0"
                                     }`}
                             >
-                                <p className="text-[14px] tracking-widest">{x.title}</p>
+                                <p className="text-[13px] tracking-widest text-[#b5b3b3]">{x.title}</p>
                                 <h1 className="text-5xl md:text-6xl leading-tight">
                                     {x.head}
                                 </h1>
-                                <p className="text-[14px] pb-4 pr-6 md:pr-12">{x.para}</p>
+                                <p className="text-[14px] pb-4 pr-6 md:pr-12 text-[#b5b3b3]">{x.para}</p>
                                 <CustomButton label="Book Reservation Now" width="270px" icon={true} />
                             </div>
                         ))}
